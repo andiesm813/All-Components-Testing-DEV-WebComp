@@ -13,9 +13,12 @@ export default class View1 extends LitElement {
     :host {
       height: 100%;
       display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: flex-start;
       align-items: stretch;
-      align-content: flex-start;
+      align-content: stretch;
+      overflow: auto;
     }
     .column-layout {
       display: flex;
@@ -25,7 +28,7 @@ export default class View1 extends LitElement {
       justify-content: flex-start;
       align-items: stretch;
       align-content: flex-start;
-      overflow: auto;
+      gap: 16px;
       position: relative;
       padding: 24px;
       min-width: 50px;
@@ -37,13 +40,16 @@ export default class View1 extends LitElement {
       display: flex;
     }
     .group_1 {
+      flex-wrap: wrap;
       justify-content: flex-start;
       align-items: stretch;
-      align-content: flex-start;
+      align-content: stretch;
       gap: 16px;
       position: relative;
       min-width: 50px;
       min-height: 50px;
+      flex-grow: 1;
+      flex-shrink: 0;
     }
     .card {
       width: 240px;
@@ -74,6 +80,7 @@ export default class View1 extends LitElement {
       min-width: 50px;
       min-height: 50px;
       max-width: 360px;
+      flex-shrink: 0;
     }
     .group_4 {
       flex-wrap: wrap;
@@ -104,15 +111,15 @@ export default class View1 extends LitElement {
       min-height: 50px;
     }
     .group_7 {
+      flex-wrap: wrap;
       justify-content: flex-start;
       align-items: stretch;
-      align-content: flex-start;
+      align-content: stretch;
       gap: 16px;
       position: relative;
       min-width: 50px;
       min-height: 50px;
-      flex-grow: 1;
-      flex-basis: 0;
+      flex-shrink: 0;
     }
     .tabs {
       min-width: 0;
@@ -187,7 +194,7 @@ export default class View1 extends LitElement {
       min-width: 0;
       min-height: 0;
       flex-grow: 1;
-      flex-shrink: 0;
+      flex-basis: 0;
     }
     .calendar {
       width: max-content;
